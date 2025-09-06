@@ -1,0 +1,1149 @@
+/* ===============================
+   General body & typography
+=============================== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #f2f2f7;
+    margin: 0;
+    padding: 0;
+    color: #1c1c1e;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth transitions & touch feel */
+* {
+    box-sizing: border-box;
+    transition: all 0.25s cubic-bezier(0.3, 0.8, 0.5, 1.2);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ===============================
+   Header / Navigation bar
+=============================== */
+header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.8em;
+    border-bottom: 0.5px solid rgba(60,60,67,0.29);
+}
+
+/* ===============================
+   Containers & cards
+=============================== */
+.container {
+    background: #fff;
+    margin: 40px auto;
+    padding: 20px 16px;
+    max-width: 800px;
+    width: 90%;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+/* ===============================
+   Highlighted text (red theme)
+=============================== */
+.highlight {
+    color: #d32f2f; /* deep red */
+    font-weight: 600;
+}
+
+/* ===============================
+   Buttons (black & red theme)
+=============================== */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #d32f2f; /* deep red */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+    margin: 8px;
+    min-width: 100px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: #b71c1c;
+    opacity: 0.9;
+}
+
+.btn:active {
+    opacity: 0.8;
+}
+
+/* ===============================
+   Forms & input fields
+=============================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    font-weight: 500;
+}
+
+form input, form select, form textarea {
+    border: 1px solid rgba(60,60,67,0.3);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 1em;
+    background: #fff;
+    color: #1c1c1e;
+}
+
+form input::placeholder {
+    color: rgba(60,60,67,0.6);
+    opacity: 0.5;
+}
+
+form button {
+    padding: 12px 16px;
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #b71c1c;
+}
+
+/* ===============================
+   Dashboard & list items
+=============================== */
+.dashboard-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.list-item {
+    background: #fff;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    height: 44px;
+}
+
+/* ===============================
+   Footer
+=============================== */
+footer {
+    text-align: center;
+    color: #8e8e93;
+    padding: 16px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* ===============================
+   Modals & bottom sheets
+=============================== */
+.modal {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+.bottom-sheet {
+    background: #fff;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    height: 40%;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+}
+
+.bottom-sheet .drag-handle {
+    width: 40px;
+    height: 4px;
+    background: rgba(60,60,67,0.3);
+    border-radius: 2px;
+    margin: 8px auto;
+}
+
+/* ===============================
+   Animations
+=============================== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  .container, .login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  h1, h2 {
+    margin-bottom: 1rem;
+    color: #007aff;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007aff;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #007aff;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #005ecb;
+  }
+  /* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  .container, .login-container, .register-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  h1, h2 {
+    margin-bottom: 1rem;
+    color: #007aff;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    border-color: #007aff;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #007aff;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #005ecb;
+  }
+  /* Dashboard styles */
+.dashboard-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .dashboard-container h2 {
+    margin-bottom: 2rem;
+    color: #007aff;
+  }
+  
+  .admin-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .admin-card {
+    background: #f9f9f9;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+  
+  .admin-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .admin-card h3 {
+    margin-bottom: 0.5rem;
+    color: #007aff;
+  }
+  
+  .admin-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+ /* Report form styles report ca*/
+.report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .report-form input[type="text"],
+  .report-form input[type="email"],
+  .report-form input[type="number"],
+  .report-form input[type="date"],
+  .report-form select,
+  .report-form textarea,
+  .report-form input[type="file"] {
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+  
+  .report-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .report-form label {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: left;
+  }
+  /* General container styling dv complain*/
+.dashboard-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background-color: #f8f9fa;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Headings */
+  .dashboard-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  
+  /* Form styling */
+  .report-form input[type="text"],
+  .report-form input[type="email"],
+  .report-form input[type="number"],
+  .report-form input[type="date"],
+  .report-form select,
+  .report-form textarea,
+  .report-form input[type="file"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .report-form input[type="text"]:focus,
+  .report-form input[type="email"]:focus,
+  .report-form input[type="number"]:focus,
+  .report-form input[type="date"]:focus,
+  .report-form select:focus,
+  .report-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Textarea styling */
+  .report-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Labels for radio buttons */
+  .report-form label {
+    font-weight: 600;
+    color: #555;
+  }
+  
+  /* Radio buttons layout */
+  .report-form input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    font-weight: 700;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    user-select: none;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-btn {
+    background-color: #6c757d;
+  }
+  
+  .back-btn:hover {
+    background-color: #495057;
+  }
+  
+  /* After submit buttons container */
+  .after-submit {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .after-submit button {
+    margin: 0 12px 12px 0;
+    padding: 12px 22px;
+    font-size: 1rem;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .after-submit button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Reset some default margins/padding legal aid contact*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Container styling */
+  .dashboard-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Heading */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  /* Popup message box */
+  .popup {
+    background: #fff8e1;
+    border: 1px solid #ff9800;
+    color: #e65100;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  
+  /* Contact card style */
+  .contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin: 8px 0;
+    transition: background 0.2s;
+  }
+  
+  .contact-card:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Branch name */
+  .contact-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  /* Call button */
+  .call-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .call-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Back button */
+  .back-btn {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .back-btn:hover {
+    background: #5a6268;
+  }
+  
+  /* Optional: Make buttons consistent */
+  .btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn:hover {
+    background: #0056b3;
+  }
+  /* Minimalistic iOS-inspired style */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f8fb;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #007aff;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #333;
+    font-size: 14px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #007aff;
+    color: white;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e6f0ff;
+    cursor: default;
+}
+/* Minimalistic iOS-inspired style dv_cases */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f8fb;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #007aff;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #333;
+    font-size: 14px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #007aff;
+    color: white;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e6f0ff;
+    cursor: default;
+}
+/* Minimalistic iOS-inspired style */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f8fb;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #007aff;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #333;
+    font-size: 14px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #007aff;
+    color: white;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e6f0ff;
+    cursor: default;
+}
+/* css/admin_dashboard1.css */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+  }
+  
+  .dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: #0a74da;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  header p {
+    margin: 0;
+    font-size: 15px;
+    color: #666;
+  }
+  
+  header .btn {
+    background-color: #0a74da;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  header .btn:hover {
+    background-color: #064a9e;
+  }
+  
+  /* Table styles */
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+  }
+  
+  thead {
+    background-color: #0a74da;
+    color: #fff;
+  }
+  
+  th, td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9fbff;
+  }
+  
+  tbody tr:hover {
+    background-color: #e4edff;
+  }
+  
+  a {
+    color: #0a74da;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive header on small screens */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  
+  
+  /* css/style.css admin dashboard 2 */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f8fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .dashboard-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  header h1 {
+    color: #0a74da;
+    font-weight: 700;
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  header p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+  }
+  
+  header .btn {
+    background-color: #0a74da;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  header .btn:hover {
+    background-color: #064a9e;
+  }
+  
+  h2 {
+    margin: 20px 0 10px 0;
+    font-size: 22px;
+    color: #222;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+  }
+  
+  thead {
+    background-color: #0a74da;
+    color: white;
+  }
+  
+  th, td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f7faff;
+  }
+  
+  tbody tr:hover {
+    background-color: #e1e9ff;
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  
+  /* Chatbot Styles */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 450px;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transform: scale(0); /* Initially hidden */
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+.chatbot-container.active {
+  transform: scale(1);
+}
+.chatbot-header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 1rem;
+  font-weight: 700;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.chatbot-body {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+.chatbot-body::-webkit-scrollbar {
+  width: 8px;
+}
+.chatbot-body::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+.message {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  max-width: 80%;
+}
+.user-message {
+  align-self: flex-end;
+  background-color: var(--primary);
+  color: white;
+  border-bottom-right-radius: 0;
+}
+.bot-message {
+  align-self: flex-start;
+  background-color: rgba(0, 135, 158, 0.1);
+  color: var(--text-light);
+  border: 1px solid rgba(0, 135, 158, 0.3);
+  border-bottom-left-radius: 0;
+}
+.chatbot-footer {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid var(--primary);
+}
+.chatbot-footer input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border-radius: 50px;
+  border: 1px solid var(--primary);
+  background-color: #1e293b;
+  color: var(--text-light);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.chatbot-footer input:focus {
+  border-color: var(--secondary);
+}
+.send-btn {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.send-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Chatbot Trigger Button */
+.chatbot-trigger-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.chatbot-trigger-btn:hover {
+  transform: scale(1.1);
+}
